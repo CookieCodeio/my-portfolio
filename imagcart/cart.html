@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="abc.css">
+    <script src="js.js"></script>
+</head>
+<body class="bgcol">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold login" href="#">Imagcart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="customize.html">Customize</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">About Us</a></li>
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html">Login</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Cart Section -->
+    <section class="cart-section py-5">
+        <div class="container">
+            <h2 class="login text-center">Your Cart</h2>
+            <div class="row mt-4">
+                <div class="col-md-8" id="cart-items">
+                    <!-- Cart Items will be injected here by JavaScript -->
+                </div>
+
+                <div class="col-md-4">
+                    <!-- Cart Summary -->
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">
+                            <h5 class="card-title login">Cart Summary</h5>
+                            <p class="card-text">Subtotal: ₹<span id="subtotal">0</span></p>
+                            <p class="card-text">Shipping: ₹5.00</p>
+                            <p class="card-text">Total: ₹<span id="total">5.00</span></p>
+                            <a href="checkout.html" class="btn btn-pop btn-success btn-block">Proceed to Checkout</a>
+                            <button class="btn btn-pop btn-danger btn-block mt-2" onclick="removeAll()">Clear Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Your go-to store for unique and customizable dresses. We offer a wide range of products to suit every style and occasion.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="customize.html" class="text-white">Customize</a></li>
+                        <li><a href="products.html" class="text-white">Products</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2024 Dress Customization Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FontAwesome for social icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Cart Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            
+            // Get elements
+            const cartItemsContainer = document.getElementById('cart-items');
+            const subtotalElement = document.getElementById('subtotal');
+            const totalElement = document.getElementById('total');
+
+            // Clear previous cart items
+            cartItemsContainer.innerHTML = '';
+
+            // Calculate subtotal
+            let subtotal = 0;
+
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('card', 'mb-3', 'bg-dark', 'text-white');
+
+                itemElement.innerHTML = 
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="${item.image}" class="img-fluid rounded-start" alt="${item.name}">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">${item.name}</h5>
+                                <p class="card-text">Price: ₹${item.price}</p>
+                                <p class="card-text">Quantity: ${item.quantity}</p>
+                            </div>
+                        </div>
+                    </div>
+                ;
+
+                cartItemsContainer.appendChild(itemElement);
+
+                subtotal += item.price * item.quantity;
+            });
+
+            function addToCart2(selectedColorImage, name, price, quantity) {
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+    // Add the selected item to the cart
+    cartItems.push({
+        image: selectedColorImage,
+        name: name,
+        price: price,
+        quantity: quantity
+    });
+    
+    // Save back to localStorage
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+    // Optionally, show a confirmation or redirect to the cart page
+    alert('Item added to cart!');
+}
+
+
+            subtotalElement.textContent = subtotal;
+            totalElement.textContent = subtotal + 5; // Assuming ₹5.00 is a fixed shipping cost
+        });
+    </script>
+</body>
+</html>

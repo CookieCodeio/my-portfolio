@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="abc.css">
+    <script src="angular.min.js"></script>
+</head>
+<body ng-app="" class="fullsize custom-border element text-white fs-5 bgcol container align-content-center d-flex justify-content-center">
+    <section>
+        <h1 class="login">Create an Account</h1>
+        <br>
+        <label class="phe">Username</label> 
+        <br>
+        <div class="text-wrap w-20">
+            <input class="inputsmooth ph" id="username" type="text" placeholder="Enter username">
+        </div>
+        <br>
+        <label class="phe">Email</label> 
+        <br>
+        <div class="text-wrap w-20">
+            <input class="inputsmooth ph" id="email" type="email" placeholder="Enter email">
+        </div>
+        <br>
+        <label class="phe">Password</label> 
+        <br>
+        <div class="text-wrap w-20">
+            <input class="inputsmooth ph" id="password" type="password" placeholder="Enter password">
+        </div>
+        <br>
+        <label class="phe">Confirm Password</label> 
+        <br>
+        <div class="text-wrap w-20">
+            <input class="inputsmooth ph" id="confirm-password" type="password" placeholder="Confirm password">
+        </div>
+        <br>
+        <span class="phe createnew">Already have an account? <a href="login.html">Login</a></span>
+        <br>
+        <br>
+        <button id="signup-submit" class="btn btn-pop btn btn-sm btn-success">Signup</button>
+    </section>
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#signup-submit").click(function(event){
+        alert("Your account has been created successfully");
+        event.preventDefault();
+    });
+
+    $("input").mouseenter(function(){
+        $(this).addClass("color");
+    });
+    $("input").mouseleave(function(){
+        $(this).removeClass("color");
+    });
+});
+</script>
+</body>
+</html>

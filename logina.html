@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Offside&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            cursor: pointer;
+        }
+        body {
+            /* background-image: url(data:image/jpeg;base64,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);
+            height: 100vh;
+            background-size: cover;
+            width: 100%; */
+            background-color: #0e0e0e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            width: 25rem;
+            height:  460px;
+            display: flex;
+            flex-direction: column;
+            background: rgba(225, 225, 225, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.57);
+            border-radius: 15px;
+            border-left: 1px solid rgba(225,225,225,.3);
+            border-top: 1px solid rgba(225,225,225,.3);
+            padding: 20px;
+        }
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,.2);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            opacity: .6;
+        }
+        label {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.788);
+            margin-bottom: 10px;
+        }
+        input {
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .forgot-password a {
+            color: rgb(12, 10, 10);
+            text-align: right;
+            margin-top: -9px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .forgot-password a:hover {
+            color: rgba(0, 179, 255, 0.832);
+            
+            text-align: right;
+            margin-top: -9px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background-container div {
+  position: absolute;
+  border-radius: 70%;
+  animation: gradient 18.4s infinite;
+}
+
+.background-container div:nth-child(1) {
+  height: 80%;
+  width: 90%;
+  background-color:#ff597d43;
+  left: -30%;
+  top: -10%;
+}
+
+.background-container div:nth-child(2) {
+  height: 60%;
+  width: 40%;
+  background-color: #0f0e0e; 
+  bottom: -19%;
+  right: -12%;
+  animation-delay: 21s;
+}
+
+.background-container div:nth-child(3) {
+  height: 615%;
+  width: 50%;
+  background-color :#c757bf7a;
+  top: -15%;
+  left: -13%;
+  animation-delay: 6.3s;
+}
+
+.background-container div:nth-child(4) {
+  height: 50%;
+  width: 75%;
+  background-color: #ff597c;
+  bottom: 13%;
+  left: -10%;
+  animation-delay: 5.25s;
+}
+
+.background-container:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(80px);
+}
+
+@keyframes gradient {
+  70% {
+    transform: scale(0.2) translate(50px);
+}
+}
+        
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <form>
+        <h1 style="font-family:fantasy;">LOGIN</h1>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+        </div>
+        <div class="checkbox text-secondary  d-flex justify-content-end">
+            <lable>
+            <input type="checkbox" name="remember"> Remember
+            </lable>
+            </div>
+        <div class="forgot-password container">
+            <a href="#">Forgot Password?</a>
+        </div>
+        <button
+                    class="btn btn-lg text-dark btn-block mt-4 btn-dark"  style=" background: linear-gradient(40deg, #ffa74f,#c869ff, #a8ffee);font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
+                    type="submit"
+                    id="signupbtn"
+                  >
+                    Login
+                  </button>
+        <p class="mt-2">Don't have an account? <a href="signup.html" class="text-decoration-none" style="color: #9580e3;">Signup</a></p>
+        
+    </form>
+</body>
+</html>
+
+           

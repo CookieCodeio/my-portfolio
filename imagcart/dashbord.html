@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Dress Store - Home</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="abc.css">
+    <script src="js.js"></script>
+</head>
+
+<body class="bgcol">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold login" href="#">Imagcart</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="customize.html">Customize</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../indexa.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">About Us</a></li>
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html">Login</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="home1 hero-section text-center text-white py-5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-start">
+                <!-- Column for customizing the shirt -->
+                <div class="col-md-5 text-start">
+                    <h1 class="display-4 login">Design Your Unique Dress</h1>
+                    <p class="lead phe">Unleash your creativity with our easy-to-use customization tool.</p>
+                    <a href="customize.html" class="btn btn-pop btn-lg btn-success mt-3">Customize Shirt</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Featured Products -->
+    <section class="mt-4 py-3">
+        <div class="container">
+            <h2 class="mb-5 login text-center">Featured Products</h2>
+            <div class="row mt-3">
+                <!-- Product 1 -->
+                <div class="cardhov col-md-4 mt-9">
+                    <div class="card bg-dark text-white">
+                        <img src="classic.png" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title login">Classic T-Shirt</h5>
+                            <p class="card-text">Get your classic t-shirt</p>
+                            <p class="card-text fw-bold login" id="price">₹1900</p>
+                            <a href="product1.html" class="btn btn-pop btn-sm btn-success">View Details</a>
+                            <button onclick="addToCart('Classic T-Shirt', 1900, 'classic.png')" class="mt-2 btn btn-pop btn-sm cartcol">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="cardhov col-md-4">
+                    <div class="card bg-dark text-white">
+                        <img src="elagant.jpg" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title login">Elegant Dress</h5>
+                            <p class="card-text">Get your elegant t-shirt</p>
+                            <p class="card-text fw-bold login" id="price">₹800</p>
+                            <a href="product2.html" class="btn btn-pop btn-sm btn-success">View Details</a>
+                            <button onclick="addToCart('Elagant T-shirt', 800, 'elagant.jpg')" class="mt-2 btn btn-pop btn-sm cartcol">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="cardhov col-md-4">
+                    <div class="card bg-dark text-white">
+                        <img src="hoodie.jpg" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title login">Casual Hoodie</h5>
+                            <p class="card-text">Design a cozy hoodie with your favorite colors and fabrics.</p>
+                            <p class="card-text fw-bold login" id="price">₹900</p>
+                            <a href="product3.html" class="btn btn-pop btn-sm btn-success">View Details</a>
+                            <button onclick="addToCart('Hoodie', 900, 'hoodie.jpg')" class="mt-2 btn btn-pop btn-sm cartcol">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="text-white py-5">
+        <div class="container">
+            <h2 class="login text-center">Customer Reviews</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p class="phe">"I love the fit and feel of this t-shirt. It's become my go-to for casual outings!"</p>
+                        <p>- Alex P.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p class="phe">"The quality is top-notch. The customization options are endless!"</p>
+                        <p>- Maria L.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial">
+                        <p class="phe">"Fast shipping and excellent customer service. Highly recommend this store!"</p>
+                        <p>- Jake T.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter py-5 bg-dark">
+        <div class="container text-center">
+            <h2 class="login mb-4">Stay Updated!</h2>
+            <p class="phe">Subscribe to our newsletter to receive the latest news and exclusive offers.</p>
+            <form class="form-inline justify-content-center mt-3">
+                <input type="email" class="mb-4 form-control form-control-lg mr-2" placeholder="Enter your email">
+                <button type="submit" class="btn btn-pop btn-lg btn-success">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Your go-to store for unique and customizable dresses. We offer a wide range of products to suit every style and occasion.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="customize.html" class="text-white">Customize</a></li>
+                        <li><a href="../indexa.html" class="text-white">Products</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2024 Dress Customization Store. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FontAwesome for social icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

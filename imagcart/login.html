@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagcart</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist\css\bootstrap.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="abc.css">
+    <script src="angular.min.js"></script>
+</head>
+<body ng-app="" class=" fullsize custom-border element text-white fs-5 bgcol container align-content-center d-flex justify-content-center ">
+    
+    <section>
+        <h1 class="login">Welcome back</h1> 
+        <br>
+        <label class= "phe" >Username</label> 
+        <br>
+    <div class="text-wrap w-20">
+        <input class= "inputsmooth ph" id="name" type="text" placeholder="username">
+        <br>
+        <br>
+        <label class= "phe" >Password</label> 
+        <br>
+        <div class="text-wrap w-20">
+        <input class= "inputsmooth ph" id="name" type="password" placeholder="Password">
+        <br>
+        <br>
+        <span class="phe createnew">Create a new account? <a href="signup.html">signup</a></span>
+        <br>
+        <br>
+        <button id=submit class="btn btn-pop btn btn-sm btn-success">Login</button>
+    </section>
+</div>
+<script>
+$(document).ready(function(){
+            // Handle Login button click
+            $("#submit").click(function(event){
+                event.preventDefault();
+                window.location.href = "dashbord.html"; // Redirect to another HTML page
+            });
+        });
+</script>
+</body>
+</html>
