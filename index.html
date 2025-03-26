@@ -2,139 +2,612 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Bootstrap Navbar Sidebar - Fixed to Left or Right</title>
-    <link rel="stylesheet"
-          id="theme_link"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/materia/bootstrap.min.css"/>
-    <link rel="stylesheet" href="navbar-fixed-right.min.css">
-    <link rel="stylesheet" href="navbar-fixed-left.min.css">
-    <link rel="stylesheet" href="docs.css">
-    <script
-            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-    <script src="docs.js"></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShiftCot</title><!---indexa.-->>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+<link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="content.css">
+    <!-- <meta name="generator" content="Mobirise v5.9.18, mobirise.com"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+    <meta name="description" content="">
+    
+    
+    <title>Home</title>
+    <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css"> -->
+    <link rel="stylesheet" href="assets/socicon/css/styles.css">
+    <!-- <link rel="stylesheet" href="assets/theme/css/style.css"> -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap&display=swap"></noscript>
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=CcBr9I"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=CcBr9I" type="text/css">
+  
+    <style>
+        body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.background-container {
+    position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background-container div {
+    position: absolute;
+  border-radius: 70%;
+  background-color: transparent;
+  animation: gradient 38.4s infinite;
+}
+
+.background-container div:nth-child(1) {
+    height: 80%;
+  width: 190%;
+  background-color:#3333337e;
+  left: -30%;
+  top: -40%;
+}
+
+.background-container div:nth-child(2) {
+    height: 60%;
+  width: 40%;
+  background-color:  rgba(115, 116, 118, 0.241);
+  bottom: -19%;
+  right: -20%;
+  animation-delay: 21s;
+}
+
+.background-container div:nth-child(3) {
+    height: 615%;
+  width: 50%;
+  background-color :#3c3c3c;
+  top: -15%;
+  left: -13%;
+  animation-delay: 6.3s;
+}
+
+.background-container div:nth-child(4) {
+    height: 50%;
+  width: 75%;
+  background-color: #3e3e3ea5;
+  bottom: 13%;
+  left: -10%;
+  animation-delay: 5.25s;
+}
+
+.background-container:after {
+    position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(80px);
+}
+
+@keyframes gradient {
+  70% {
+    transform: scale(0.2) translate(50px);
+}
+}
+
+.content {
+    position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  /* Add padding or margin to create space for content */
+}
+.playwrite-cu-heading-bold {
+  font-family: "Playwrite CU", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400; /* You can change this value between 100 to 400 */
+  font-style: normal;
+}
+
+
+        
+        .gradient-text {
+            
+          background: linear-gradient(210deg,#e1ceceee, #cda2666f);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          text-shadow: 2px 3px #887e6b46;
+        }
+        *{
+            color: #1a1a1a;
+            
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+      </style>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<!-- //////////git////////////////////////////////////////////////////////// -->
 
-<body>
-<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-    <a class="navbar-brand" href>Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link">Contact</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item">Action</a>
-                    <a class="dropdown-item">Another action</a>
-                    <a class="dropdown-item">Something else here</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item">Separated link</a>
-                    <a class="dropdown-item">One more separated link</a>
+
+
+
+
+<!-- //////////////////////////////////////////////////////////////////// -->
+<body style="background-color: #ff0e0e;" >
+    <div class="background-container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      
+      <div class="content">
+        <!-- Your page content goes here -->
+      
+    
+
+    <div class="row px-4 pt-3 "  class="navbar navbar-fixed-top "  style="background: transparent;text-shadow: 1px 1px 1px #191919;
+  backdrop-filter: blur(10px);">
+        <div class="col mb-2">
+            <p class="h1 fw-bold gradient-text " style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif Gill Sans Extrabold, sans-serif;"  >ShiftCot</p>
+        </div>
+        <div class="col mt-2 d-flex justify-content-end " >
+            <nav>
+                <ul class="list-inline  ">
+                    <li class="list-inline-item  dropdown mx-3 px-3">
+                        <a style="color: #c1c1c1;" class="text-decoration-none dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class=" dropdown-item" href="#electronics">Electronics</a></li>
+                            <li><a class="dropdown-item" href="#fashion">Fashion</a></li>
+                            <li><a class="dropdown-item" href="#home-decor">Home Decor</a></li>
+                        </ul>
+                    </li>
+                    <li  class="list-inline-item px-2"><a style="color: #c1c1c1;"  class="text-decoration-none" href="checkout.html"><i class="fa fa-shopping-cart " style="color: #c1c1c1;" style="font-size:24px;padding: 0px 20px 0px 20px;"></i></a></li>
+                    <li  class="list-inline-item px-2"><a style="color: #c1c1c1;" class="text-decoration-none" href="#contact">Contact</a></li>
+                    <li  class="list-inline-item px-1"><a style="color: #c1c1c1;" class="text-decoration-none"  href="logina.html">Login</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </div></div><br><br><br>
+    <!-- //////////////////////////////////////////////////////////////////// -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> SLIDER | E-COMMERCE WEBSITE </title>
+        <!-- favicon -->
+        <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+        <!-- EXTERNAL LINKS -->
+        <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+        <style>
+            body
+            {
+                margin: 0;
+            }
+            #containerSlider
+            {
+                margin: auto;
+                width: 90%;
+                text-align: center;
+                padding-top: 100px;
+                box-sizing: border-box;
+            }
+            #containerSlider img
+            {
+                width: 100%;
+                height: 140%;
+                text-align: center;
+                align-content: center;
+            }
+            @media(max-width: 732px)
+            {
+                #containerSlider img
+                {
+                    height: 12em;
+                }
+            }
+            @media(max-width: 500px)
+            {
+                #containerSlider img
+                {
+                    height: 10em;
+                }
+            }
+        </style>
+    
+    </head>
+    <body>
+        <section >
+                <div id="containerSlider" c >
+                    <div id="slidingImage"> <img src="img/image1.png" alt="image1"> </div>
+                    <div id="slidingImage"> <img src="img/image2.png" alt="image2"> </div>
+                    <div id="slidingImage"> <img src="img/image3.png" alt="image3"> </div>
+                    <div id="slidingImage"> <img src="img/image4.png" alt="image4"> </div>
                 </div>
-            </li>
-        </ul>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" data-class="fixed-left">
-                    <i class="fa fa-arrow-left"></i>
-                    Fixed Left
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-class="fixed-top">
-                    <i class="fa fa-arrow-up"></i>
-                    Fixed Top
-                    <small>(original)</small>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-class="fixed-right">
-                    <i class="fa fa-arrow-right"></i>
-                    Fixed Right
-                </a>
-            </li>
-        </ul>
-    </div>
-</nav>
+        </section>
+        <div style="width: 100%; height: 2rem;">
 
-<div class="container">
-    <div class="jumbotron">
-        <h1 class="display-4">
-            Bootstrap Navbar Sidebar
-            <br>
-            <small>Fixed to Left or Right</small>
-        </h1>
-        <p>
-            <strong>
-                Use classic Bootstrap navbar as sidebar, on left or right side.
-            </strong>
-        </p>
-        <p>
-            <a class="github-button" href="https://github.com/mladenplavsic/bootstrap-navbar-sidebar"
-               data-icon="octicon-star" data-show-count="true"
-               aria-label="Star mladenplavsic/bootstrap-navbar-sidebar on GitHub">Star</a>
-            <a class="github-button" href="https://github.com/mladenplavsic/bootstrap-navbar-sidebar/fork"
-               data-icon="octicon-repo-forked" data-show-count="true"
-               aria-label="Fork mladenplavsic/bootstrap-navbar-sidebar on GitHub">Fork</a>
-            <a class="github-button" href="https://github.com/mladenplavsic"
-               aria-label="Follow @mladenplavsic on GitHub">Follow @mladenplavsic</a>
-        </p>
-        <p>Same as when using <code>.fixed-top</code> for navbar - add class <code>.fixed-left</code> or <code>.fixed-right</code>
-            where needed.</p>
-        <p>Click buttons below, and appropriate class will be added to example navbar.</p>
-        <div class="btn-group" role="group">
-            <button type="button" data-class="fixed-left" class="btn btn-primary">
-                <i class="fa fa-arrow-left"></i>
-                Fixed Left
-            </button>
-            <button type="button" data-class="fixed-top" class="btn btn-primary">
-                <i class="fa fa-arrow-up"></i>
-                Fixed Top
-                <small>(original)</small>
-            </button>
-            <button type="button" data-class="fixed-right" class="btn btn-primary">
-                <i class="fa fa-arrow-right"></i>
-                Fixed Right
-            </button>
+        </div>
+        
+    <!-- ////////////////shoping photoes///////////////////////////////////////////////////////////////////////////////////////////// -->
+    <div  id="mainContainer">
+        
+        <h1> clothing for men and women  </h1>
+        <div id="containerClothing" >
+            <!-- JS rendered code -->
+        </div>
+        
+        <h1> accessories for men and women </h1>
+        <div id="containerAccessories">
+            <!-- JS rendered code -->
         </div>
     </div>
-
-    <div class="card">
-        <div class="card-body">
-            <div class="form-group">
-                <label>
-                    Select another bootstrap theme from
-                    <a href="https://bootswatch.com/" target="_blank">Bootswatch</a>
-                </label>
-                <select class="form-control width-md" id="theme_select" onchange="selectTheme(value)"></select>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        Repository maintained by <a href="https://github.com/mladenplavsic">mladenplavsic</a>
-    </footer>
+    <!-- ////////////////footer///////////////////////////////////////////////////////////////////////////////////////////// -->
+    
+    <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    
+    
+    <script src="content.js"></script>
+    
+<div style="width: 100%; height: 11rem;">
 
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- Code injected by live-server -->
+    <script>
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+    </script>
+    </body>
+        <!-- <script src=“https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js”></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+            $('#containerSlider').slick({
+                dots: true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                });
+            });
+        </script>
+    </html>
+    <!-- //////////////////////////////////////////////////////////////////// -->
+    
+   
+        
+  <section data-bs-version="5.1" class="article11 cid-uo5kdel1rX" id="article11-8">
+    
+
+    
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div  class="title col-md-12 col-lg-7">
+                
+                <h1 style="text-align: center;" class="mbr-section-subtitle align-center mbr-fonts-style mt-4 display-7">Design Over Product!</h1>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="features13 start cid-unRgmOe8ZS" id="features013-3">
+    
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-12 content-head">
+      
+    </div>
+  </div>
+  <div class="row mbr-section-content">
+    <div class="item features-image col-6 col-md-4 col-lg-2">
+      <div class="item-wrapper">
+        <div class="item-img">
+          <img src="assets/images/shop1.jpg" alt="Mobirise Website Builder" title="" data-slide-to="0" data-bs-slide-to="0">
+        </div>
+        <div class="item-content align-left mt-3">
+          <h5 class="item-title mbr-fonts-style mb-3 display-7">
+            <strong>Phone Cases</strong>
+          </h5>
+          
+          
+        </div>
+        
+      </div>
+    </div>
+    <div class="item features-image col-6 col-md-4 col-lg-2">
+      <div class="item-wrapper">
+        <div class="item-img">
+          <img src="assets/images/shop2.jpg" alt="Mobirise Website Builder" title="" data-slide-to="1" data-bs-slide-to="1">
+        </div>
+        <div class="item-content align-left mt-3">
+          <h5 class="item-title mbr-fonts-style mb-3 display-7">
+            <strong>Creators</strong>
+          </h5>
+          
+          
+        </div>
+        
+      </div>
+    </div>
+    <div class="item features-image col-6 col-md-4 col-lg-2">
+      <div class="item-wrapper">
+        <div class="item-img">
+          <img src="assets/images/shop3.jpg" alt="Mobirise Website Builder" title="" data-slide-to="2" data-bs-slide-to="2">
+        </div>
+        <div class="item-content align-left mt-3">
+          <h5 class="item-title mbr-fonts-style mb-3 display-7">
+            <strong>Eco-Friendly Crafts</strong>
+          </h5>
+          
+          
+        </div>
+        
+      </div>
+    </div>
+    <div class="item features-image col-6 col-md-4 col-lg-2">
+      <div class="item-wrapper">
+        <div class="item-img">
+          <img src="assets/images/shop4.jpg" alt="Mobirise Website Builder" title="" data-slide-to="3" data-bs-slide-to="3">
+        </div>
+        <div class="item-content align-left mt-3">
+          <h5 class="item-title mbr-fonts-style mb-3 display-7">
+            <strong>Jewelry</strong>
+          </h5>
+          
+          
+        </div>
+        
+      </div>
+    </div>
+    <div class="item features-image col-6 col-md-4 col-lg-2">
+      <div class="item-wrapper">
+        <div class="item-img">
+          <img src="assets/images/shop5.jpg" alt="Mobirise Website Builder" title="" data-slide-to="4" data-bs-slide-to="4">
+        </div>
+        <div class="item-content align-left mt-3">
+          <h5 class="item-title mbr-fonts-style mb-3 display-7">
+            <strong>Wooden Crafts</strong>
+          </h5>
+          
+          
+        </div>
+        
+      </div>
+    </div>
+    <div class="item features-image col-6 col-md-4 col-lg-2">
+      <div class="item-wrapper">
+        <div class="item-img">
+          <img src="assets/images/shop6.jpg" alt="Mobirise Website Builder" title="" data-slide-to="5" data-bs-slide-to="5">
+        </div>
+        <div class="item-content align-left mt-3">
+          <h5 class="item-title mbr-fonts-style mb-3 display-7">
+            <strong>Wooden Crafts</strong>
+          </h5>
+          
+          
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+
+
+<section data-bs-version="5.1" class="features25 cid-unRh2BT5SJ" id="features1-5">
+    
+
+    
+    
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-2 display-2">
+                    <strong>Features</strong>
+                </h3>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="item features-without-image mb-5 col-12 col-md-3">
+                <div class="item-wrapper align-center">
+                    <div class="iconfont-wrapper">
+                        <span class="mbr-iconfont mbrib-magic-stick"></span>
+                    </div>
+                    <h5 class="card-title mbr-fonts-style display-7"><strong>Design&nbsp; Product</strong></h5>
+                    <p class="card-text mbr-fonts-style mb-0 display-7">Perfect for formal events or a night out. Customize the length, sleeve style, and fabric to make it your own.</p>
+                </div>
+            </div>
+            <div class="item features-without-image mb-5 col-12 col-md-3">
+                <div class="item-wrapper align-center">
+                    <div class="iconfont-wrapper">
+                        <span class="mbr-iconfont mobi-mbri-layers mobi-mbri"></span>
+                    </div>
+                    <h5 class="card-title mbr-fonts-style display-7"><strong>Explore Templates</strong></h5>
+                    <p class="card-text mbr-fonts-style mb-0 display-7">Our collection of customizable dresses allows you to choose fabrics, colors, patterns, and designs that fit your personality and style.</p>
+                </div>
+            </div>
+            <div class="item features-without-image mb-5 col-12 col-md-3">
+                <div class="item-wrapper align-center">
+                    <div class="card-box">
+                        <div class="iconfont-wrapper">
+                            <span class="mbr-iconfont mobi-mbri-website-theme-2 mobi-mbri"></span>
+                        </div>
+                        <h5 class="card-title mbr-fonts-style display-7"><strong>Unique Styles</strong></h5>
+                        <p class="card-text mbr-fonts-style mb-0 display-7">Select the material that suits you. Each material in the Shiftcot&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; website contains a set of unique products.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="footer1 cid-unRgHnGo0m" once="footers" id="footer1-4">
+
+    
+
+    
+    
+    <div class="container">
+        <div class="row mbr-white">
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                    <strong>Shiftcot Help</strong>
+                </h5>
+                <ul class="list mbr-fonts-style display-4">
+                    <li class="mbr-text item-wrap">Help Center</li>
+                    <li class="mbr-text item-wrap">Shiftcot Forums</li>
+                    <li class="mbr-text item-wrap">Shiftcot Kit</li>
+                    <li class="mbr-text item-wrap">Our site</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                    <strong>Developer</strong></h5>
+                <ul class="list mbr-fonts-style display-4">
+
+                    <li class="mbr-text item-wrap">Vaagishwar</li><li class="mbr-text item-wrap">Edison James</li>
+                    <li class="mbr-text item-wrap">Mohamad Apsar</li><li class="mbr-text item-wrap">Edison James</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                    <strong>Extensions</strong>
+                </h5>
+                <ul class="list mbr-fonts-style display-4">
+                    <li class="mbr-text item-wrap">Canva Editor</li>
+                    <li class="mbr-text item-wrap">Form assets</li>
+                    <li class="mbr-text item-wrap">Popup window</li>
+                    <li class="mbr-text item-wrap">Enterprise&nbsp;</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7">
+                    <strong>About</strong>
+                </h5>
+                <p class="mbr-text mbr-fonts-style mb-4 display-4">
+                    ShiftCot is a startup E-Commerce website,we specialize in creating fully customizable dresses that reflect your unique style. From fabric to fit, every dress is made just for you with premium craftsmanship. We focus on personalization, inclusivity, and sustainability, ensuring every piece is as special as the person wearing it. Design your perfect dress today!</p>
+                <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7">
+                    <strong>Social</strong>
+                </h5>
+                <div class="social-row display-7">
+                    <div class="soc-item">
+                        <a href="https://twitter.com/mobirise" target="_blank">
+                            <span class="mbr-iconfont socicon socicon-facebook"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://twitter.com/mobirise" target="_blank">
+                            <span class="mbr-iconfont socicon socicon-twitter"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://twitter.com/mobirise" target="_blank">
+                            <span class="mbr-iconfont socicon socicon-instagram"></span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>  <script src="assets/theme/js/script.js"></script>  
+  
+  
+   
+
+    
 </body>
+
 </html>
+
+
+
+
